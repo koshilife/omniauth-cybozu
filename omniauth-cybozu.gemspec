@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Kenji Koshikawa']
   spec.email         = ['koshikawa2009@gmail.com']
 
-  spec.summary       = 'OmniAuth strategy for Cybozu'
+  spec.summary       = 'OmniAuth strategy for cybozu(Kintone and Garoon)'
   spec.description   = spec.description
   spec.homepage      = 'https://github.com/koshilife/omniauth-cybozu'
   spec.license       = 'MIT'

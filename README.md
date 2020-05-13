@@ -8,7 +8,7 @@ This gem contains [Kintone](https://www.kintone.com/) and [Garoon](https://garoo
 
 You should have already installed OmniAuth into your app; if not, read the [OmniAuth README](https://github.com/intridea/omniauth) to get started.
 
-Now sign into the [Kintone Developer Program](https://developer.kintone.io/hc/en-us/) or [Cybozu Developer Network](https://developer.cybozu.io/hc/ja) and create an application. Take note of your API keys.
+Now sign into the [Kintone Developer Program](https://developer.kintone.io/hc/en-us/) or [cybozu developer network](https://developer.cybozu.io/hc/ja) and create an application. Take note of your API keys.
 
 ## Using This Strategy
 
