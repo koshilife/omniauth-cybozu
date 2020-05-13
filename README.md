@@ -39,7 +39,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   # Garoon schedules writable
   cybozu_site = 'https://{subdomain}.cybozu.com'
   cybozu_scope = ['g:schedule:read', 'g:schedule:write'].join(' ')
-  provider :cybozu, "CLIENT_ID", "CLIENT_SECRET", :scope => cybozu_scope, :client_options => {:site => cybozu_site}
+  provider :cybozu, "CLIENT_ID", "CLIENT_SECRET", { scope: cybozu_scope, client_options: { site: cybozu_site }}
 
 end
 ```
