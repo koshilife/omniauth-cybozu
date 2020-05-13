@@ -2,13 +2,13 @@
 
 [![Gem Version](https://badge.fury.io/rb/omniauth-cybozu.svg)](http://badge.fury.io/rb/omniauth-cybozu)
 
-This gem contains the [Cybozu](https://cybozu.com/)([Kintone](https://www.kintone.com/)/[Garoon](https://garoon.cybozu.co.jp/)) strategy for OmniAuth.
+This gem contains [Kintone](https://www.kintone.com/) and [Garoon](https://garoon.cybozu.co.jp/) strategy for OmniAuth.
 
 ## Before You Begin
 
 You should have already installed OmniAuth into your app; if not, read the [OmniAuth README](https://github.com/intridea/omniauth) to get started.
 
-Now sign into the [Kintone Developer Program](https://developer.kintone.io/hc/en-us/) and create an application. Take note of your API keys and refer to the following [How to add OAuth clients](https://developer.kintone.io/hc/en-us/articles/360001562353).
+Now sign into the [Kintone Developer Program](https://developer.kintone.io/hc/en-us/) or [Cybozu Developer Network](https://developer.cybozu.io/hc/ja) and create an application. Take note of your API keys.
 
 ## Using This Strategy
 
@@ -29,11 +29,17 @@ Next, tell OmniAuth about this provider. For a Rails app, your `config/initializ
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do
 
-  # when access Kintone records
-  provider :cybozu, "CLIENT_ID", "CLIENT_SECRET",{ scope: ['k:app_record:read', 'k:app_record:write'], client_options: { site: "https://{subdomain}.kintone.com"}}
+  # For kintone.com user
+  # Kintone records writable
+  kintone_site = 'https://{subdomain}.kintone.com'
+  kintone_scope = ['k:app_record:read', 'k:app_record:write'].join(' ')
+  provider :cybozu, "CLIENT_ID", "CLIENT_SECRET", { scope: kintone_scope, client_options: { site: kintone_site }}
 
-  # when access Garoon schedules
-  provider :cybozu, "CLIENT_ID", "CLIENT_SECRET",{ scope: ['k:app_record:read', 'k:app_record:write'], client_options: { site: "https://{subdomain}.cybozu.com"}}
+  # For cybozu.com user
+  # Garoon schedules writable
+  cybozu_site = 'https://{subdomain}.cybozu.com'
+  cybozu_scope = ['g:schedule:read', 'g:schedule:write'].join(' ')
+  provider :cybozu, "CLIENT_ID", "CLIENT_SECRET", :scope => cybozu_scope, :client_options => {:site => cybozu_site}
 
 end
 ```
@@ -47,7 +53,7 @@ The auth hash `request.env['omniauth.auth']` would look like this:
 
 ```js
 {
-    "provider": "tanita",
+    "provider": "cybozu",
     "uid": null, // uid will be empty, because there is no apis to get.
     "credentials": {
         "token": "ACCESS_TOKEN",
