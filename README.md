@@ -1,6 +1,9 @@
 # Omniauth::Cybozu
 
+[![Test](https://github.com/koshilife/omniauth-cybozu/workflows/Test/badge.svg)](https://github.com/koshilife/omniauth-cybozu/actions?query=workflow%3ATest)
+[![codecov](https://codecov.io/gh/koshilife/omniauth-cybozu/branch/master/graph/badge.svg)](https://codecov.io/gh/koshilife/omniauth-cybozu)
 [![Gem Version](https://badge.fury.io/rb/omniauth-cybozu.svg)](http://badge.fury.io/rb/omniauth-cybozu)
+[![license](https://img.shields.io/github/license/koshilife/omniauth-cybozu)](https://github.com/koshilife/omniauth-cybozu/blob/master/LICENSE.txt)
 
 This gem contains [Kintone](https://www.kintone.com/) and [Garoon](https://garoon.cybozu.co.jp/) strategy for OmniAuth.
 
