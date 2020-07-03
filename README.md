@@ -1,4 +1,4 @@
-# Omniauth::Cybozu
+# OmniAuth::Cybozu
 
 [![Test](https://github.com/koshilife/omniauth-cybozu/workflows/Test/badge.svg)](https://github.com/koshilife/omniauth-cybozu/actions?query=workflow%3ATest)
 [![codecov](https://codecov.io/gh/koshilife/omniauth-cybozu/branch/master/graph/badge.svg)](https://codecov.io/gh/koshilife/omniauth-cybozu)
