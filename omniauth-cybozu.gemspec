@@ -4,7 +4,7 @@ require_relative 'lib/omniauth-cybozu/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'omniauth-cybozu'
-  spec.version       = Omniauth::Cybozu::VERSION
+  spec.version       = OmniAuth::Cybozu::VERSION
   spec.authors       = ['Kenji Koshikawa']
   spec.email         = ['koshikawa2009@gmail.com']
 
