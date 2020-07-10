@@ -12,6 +12,8 @@ module OmniAuth
       option :client_options, :authorize_url => '/oauth2/authorization',
                :token_url => '/oauth2/token'
 
+    private
+
       def callback_url
         full_host + script_name + callback_path
       end

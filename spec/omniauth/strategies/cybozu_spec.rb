@@ -25,7 +25,7 @@ describe OmniAuth::Strategies::Cybozu do
     it 'returns callback url' do
       allow(subject).to receive(:full_host) { 'http://localhost' }
       allow(subject).to receive(:script_name) { '/v1' }
-      expect(subject.callback_url).to eq 'http://localhost/v1/auth/cybozu/callback'
+      expect(subject.send(:callback_url)).to eq 'http://localhost/v1/auth/cybozu/callback'
     end
   end
 end
