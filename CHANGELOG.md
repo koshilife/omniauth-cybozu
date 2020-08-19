@@ -1,3 +1,7 @@
+# 0.2.0
+
+- refs #7 fix dependencies.
+
 # 0.1.4
 
 - rename module 'Omniauth' to 'OmniAuth'.
