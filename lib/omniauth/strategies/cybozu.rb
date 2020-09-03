@@ -9,8 +9,8 @@ module OmniAuth
 
       option :skip_info, true
 
-      option :client_options, :authorize_url => '/oauth2/authorization',
-               :token_url => '/oauth2/token'
+      option :client_options, authorize_url: '/oauth2/authorization',
+               token_url: '/oauth2/token'
 
     private
 
